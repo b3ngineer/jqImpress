@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jqImpress.js example</title>
+	<link rel="stylesheet" type="text/css" href="example.css" />
+</head>
+<body>
+	<div class="no-support-message"> Your browser doesn't support modern day CSS or HTML5 features, so it does not support impress.js. </div>
+	<div id="impress">
+		<div id="start" class="step jqImpress-Slide">
+			<h1>jqImpress</h1>
+			<h2>(Use arrow keys to navigate)</h2>
+		</div>
+		<div id="slides" class="step jqImpress-Slide">
+			<h1>Slide</h1>
+			<h2>Slides are positioned horizontally according to the width of the presentation</h2>
+			<div class="code">
+				class="step jqImpress-Slide"
+			</div>
+		</div>
+		<div id="dives" class="step jqImpress-Dive">
+			<h1>Dives</h1>
+			<h2>Dives drop the step "beneath" the last step</h2>
+			<div class="code">
+				class="step jqImpress-Dive"
+			</div>
+		</div>
+		<div id="corners" class="step jqImpress-Corner">
+			<h1>Corners</h1>
+			<h2>Corners turn the step around a 90 degree corner from the last step</h2>
+			<div class="code">
+				class="step jqImpress-Corner"
+			</div>
+		</div>
+		<div id="dominos-0" class="step jqImpress-Slide jqImpress-Domino">
+			<h1>Dominos</h1>
+			<h2>Dominos fall foward as the user navigates</h2>
+			<div class="code">
+				class="step jqImpress-Domino"
+			</div>
+		</div>
+		<div id="dominos-1" class="step jqImpress-Domino">
+			<h1> </h1>
+			<h2>...like this</h2>
+		</div>
+		<div id="dominos-2" class="step jqImpress-Domino">
+			<h1> </h1>
+			<h2>(Limit 3)</h2>
+		</div>
+	</div>
+	
+	<script type="text/javascript" src="../lib/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="../lib/Modernizr.js"></script>
+	<script type="text/javascript" src="../lib/impress.js"></script>
+	<script type="text/javascript" src="../src/jqImpress.js"></script>
+	<script type="text/javascript" src="../src/Slide.js"></script>
+	<script type="text/javascript" src="../src/Domino.js"></script>
+	<script type="text/javascript" src="../src/Dive.js"></script>
+	<script type="text/javascript" src="../src/Corner.js"></script>
+	<script type="text/javascript">
+		var presentationOptions = { height : 768, width: 1024 };
+		$('#impress').jqImpress(presentationOptions);
+		impress().init();
+	</script>
+</body>
+</html>
